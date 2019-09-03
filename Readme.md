@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [Татьяна Ляшенко](https://up.htmlacademy.ru/htmlcss/26/user/1128999).
+* Студент: [Татьяна Вадимовна Ляшенко](https://up.htmlacademy.ru/htmlcss/26/user/1128999).
 * Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
 
 ---
