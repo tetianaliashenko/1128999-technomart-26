@@ -4,12 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
     <div>
-      <a><img src="img/logo-tekhnomart.png" width="109" height="19" alt="Техномарт"></a>
+      <a><img src="img/logo-tekhnomart.png" width="109" height="19" alt="Логотип Интернет-магазина «Техномарт»"></a>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <label>Поиск:<input type="text" id="search" name="search"></label>
+      </form>
       <a href="">Закладки: 0</a>
       <a href="">Корзина: 0</a>
       <a href="">Оформить заказ</a>
@@ -17,12 +21,21 @@
     <p>Интернет-магазин
       строительных материалов
       и инструментов для ремонта</p>
-    <p>+7 (812) 555-05-55</p>
+    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
     <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-    <ul>
-      <li><a href="">Войти</a></li>
-      <li><a href="">Регистрация</a></li>
-    </ul>
+    <div>
+      <ul>
+        <li><a href="">Войти</a></li>
+        <li><a href="">Регистрация</a></li>
+      </ul>
+    </div>
+    <div hidden>
+      <p><a href="">Равшан Джамшутович</a></p>
+      <ul>
+        <li><a href="">Мои заказы</a></li>
+        <li><a href="">Личный кабинет</a></li>
+      </ul>
+    </div>
     <nav>
       <ul>
         <li><a>Главная</a></li>
@@ -36,43 +49,38 @@
     </nav>
   </header>
   <main>
-    <h1 hidden>Интернет-магазин «Техномарт»</h1>
+    <h1 class="visually-hidden">Главная страница Интернет-магазина «Техномарт»</h1>
     <section>
-      <h2 hidden>Промо-блок</h2>
-      <div class="new">
-        <h3><span>Материалы</span></h3>
-        <a href="">На любой вкус</a>
-      </div>
-      <div>
-        <h3><span>Инструмент</span></h3>
-        <a href="">На все случаи</a>
-      </div>
-      <div>
-        <h3><span>Техника</span></h3>
-        <a href="">Для стройки</a>
-      </div>
-      <div>
-        <h3><span>Скидки 50%</span></h3>
-        <a href="">На 350 товаров</a>
-      </div>
-      <div>
-        <h3><span>Доставка</span></h3>
-        <a href="">Бесплатно</a>
-      </div>
-      <div class="slider-top">
-        <div>
-          <h4>Дрели</h4>
-          <p>Соседям на радость</p>
-          <a href="catalog.html">Открыть каталог</a>
-          <img src="img/slider-top-1.jpg" width="620" height="266" alt="Дрели">
-        </div>
-        <div>
-          <h4>Перфораторы</h4>
-          <p>Настоящие мужские игрушки</p>
-          <a href="catalog.html">Открыть каталог</a>
-          <img src="img/slider-top-2.jpg" width="620" height="266" alt="Перфораторы">
-        </div>
-      </div>
+      <h2 class="visually-hidden">Промо-блок</h2>
+      <ul>
+        <li class="new">Материалы
+          <a href="">На любой вкус</a>
+        </li>
+        <li>Инструмент
+          <a href="">На все случаи</a>
+        </li>
+        <li>Техника
+          <a href="">Для стройки</a>
+        </li>
+        <li>Скидки 50%
+          <a href="">На 350 товаров</a>
+        </li>
+        <li>Доставка
+          <a href="">Бесплатно</a>
+        </li>
+        <li class="slider-top">
+         <li>Дрели
+           <p>Соседям на радость</p>
+           <a href="catalog.html">Открыть каталог</a>
+           <img src="img/slider-top-1.jpg" width="620" height="266" alt="Дрели">
+         </li>
+         <li>Перфораторы
+           <p>Настоящие мужские игрушки</p>
+           <a href="catalog.html">Открыть каталог</a>
+           <img src="img/slider-top-2.jpg" width="620" height="266" alt="Перфораторы">
+         </li>
+        </li>
+      </ul>
     </section>
     <section>
       <h2>Популярные товары:</h2>
@@ -160,7 +168,7 @@
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще!
             Кредитные консультанты придут вам на помощь.</p>
-          <button type="button">Отправить заявку</button>
+          <a href="">Отправить заявку</a>
         </div>
       </div>
     </section>
@@ -180,14 +188,43 @@
     <section>
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-      <a href=""><img src="img/map-small.png" width="300" height="158" alt="Карта"></a>
+      <a href=""><img src="img/map-small.png" width="300" height="158"
+          alt="Карта размещения офиса компании «Техномарт»"></a>
       <button type="button">Заблудились? Напишите нам!</button>
+    </section>
+    <section hidden>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p><img src="img/map-large.png" width="940" height="446"
+          alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></p>
+      <button type="button" aria-label="Закрыть"></button>
+    </section>
+    <section hidden>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label>Ваше имя:
+          <input type="text" id="name" name="name" value="" placeholder="Имя Фамилия" required>
+        </label>
+        <label>Ваш e-mail:
+          <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </label>
+        <label>Текст письма:
+          <textarea id="text" name="text" placeholder="В свободной форме" rows="4"></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button" aria-label="Закрыть"></button>
+    </section>
+    <section hidden>
+      <h2>Товар добавлен в корзину!</h2>
+      <a href="">Оформить заказ</a>
+      <a href="">Продолжить покупки</a>
+      <button type="button" aria-label="Закрыть"></button>
     </section>
   </main>
   <footer>
-    <a><img src="img/logo-tekhnomart.png" width="138" height="23" alt="Техномарт"></a>
+    <a><img src="img/logo-tekhnomart.png" width="138" height="23" alt="Логотип Интернет-магазина «Техномарт»"></a>
     <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      +7 (812) 555-05-55</p>
+      <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
     <ul>
       <li><a href="">Компания</a></li>
       <li><a href="">Новости</a></li>
@@ -205,9 +242,9 @@
       Все права защищены</p>
     <div>
       <ul>
-        <li><a href="">Вконтакте</a></li>
-        <li><a href="">Фейсбук</a></li>
-        <li><a href="">Инстаграм</a></li>
+        <li><a href="" aria-label="Страница «Техномарт» Вконтакте"></a></li>
+        <li><a href="" aria-label="Страница «Техномарт» в Фейсбук"></a></li>
+        <li><a href="" aria-label="Страница «Техномарт» в Инстаграм"></a></li>
       </ul>
     </div>
     <p>Обратная связь
