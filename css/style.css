@@ -64,7 +64,7 @@ a {
     text-decoration: none;
 }
 
-body h1 {
+h1.catalog-heading {
     width: 940px;
     height: 89px;
 
@@ -79,12 +79,8 @@ body h1 {
     background-color: #f2f6f8;
 }
 
-
 .main-navigation {
-    width: 940px;
-    height: 60px;
-
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
     font-size: 17px;
     line-height: 17px;
@@ -96,9 +92,6 @@ body h1 {
 }
 
 .main-header {
-    width: 1200px;
-    height: 320px;
-
     background-color: #f4f7f9;
 }
 
@@ -108,9 +101,6 @@ body h1 {
 }
 
 .user-navigation {
-    width: 1200px;
-    height: 42px;
-
     font-weight: normal;
     font-style: normal;
     font-size: 17px;
@@ -121,14 +111,16 @@ body h1 {
     background-color: #293449;
 }
 
-.user-registration,
-.user {
+.user-registration li,
+p.user a {
     font-weight: normal;
     font-style: normal;
-    font-size: 17px;
-    line-height: 17px;
+    font-size: 21px;
+    line-height: 21px;
     font-family: "Cuprum", "Arial", sans-serif;
     color: #000000;
+
+    background-color: #ffffff;
 }
 
 .registered-user {
@@ -145,7 +137,8 @@ body h1 {
   color: #ffffff;
 }
 
-.user-registration a {
+.user-registration a,
+.user a {
     color: #000000;
 }
 
@@ -169,15 +162,13 @@ body h1 {
 }
 
 .user-navigation a:active {
-    color: #babbbd;
-    opacity: 0.6;
-
+    color: rgba(255, 255, 255, 0.6);
+    
     background-color: #161d29;
 }
 
 .site-navigation a:active {
-    color: #a8abaf;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.5);
 
     background-color: #1d2739;
 }
@@ -189,15 +180,14 @@ body h1 {
     color: #ee3643;
 }
 
-a.user:hover,
-a.user:focus {
+.user a:hover,
+.user a:focus {
     color: #000000;
 }
 
 .user-registration a:active,
-a.user:active {
-    color: #000000;
-    opacity: 0.3;
+.user a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .registered-user a:active {
@@ -213,7 +203,7 @@ a.user:active {
 
     background-color: #ee3643;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-   }
+}
 
 .site-logo-top:hover,
 .site-logo-top:focus {
@@ -221,34 +211,58 @@ a.user:active {
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
+.site-logo-top a:hover,
+.site-logo-top a:focus {
+    background-color: #ca2c37;
+}
+
 .site-logo-top:active {
     background-color: #ba2732;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
+.site-logo-top a:active {
+    background-color: #ba2732;
+}
+
 .search input {
-    width: 270px;
-    height: 42px;
+    color: transparent; 
 
-    color: #212a3a; 
-
-    background-color: #212a3a;
+    background-color: #293449;
     border: none;    
 }
 
-.search input:active,
+.search input:hover {
+    color: transparent; 
+
+    background-color: #212a3a;    
+}
+
 .search input:focus {
+    color: #000000;
+    
     background-color: #ffffff;
     border: none;
 }
 
-.make-order-button {
+.user-navigation .make-order-button {
     width: 150px;
     height: 42px;
 
     font: inherit;
 
     background-color: #63a63e;
+}
+
+.user-navigation .make-order-button:hover,
+.user-navigation .make-order-button:focus {
+    background-color: #5fbb2d;
+}
+
+.user-navigation .make-order-button:active {
+    color: rgba(255, 255, 255, 0.5);
+    
+    background-color: #518534;
 }
 
 .marks-full,
@@ -312,10 +326,7 @@ a.user:active {
     list-style: none;
 }
 
-.promo li {
-    width: 300px;
-    height: 123px;
-    
+.promo li { 
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 24px;
     line-height: 30px;
@@ -345,9 +356,6 @@ a.user:active {
 }
 
 .promo a {
-    width: 135px;
-    height: 38px;
-
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -355,34 +363,28 @@ a.user:active {
     font-style: normal;
     text-align: center;
     color: #ffffff;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 
-    background-color: #e5e5e5;
-    opacity: 0.1;
+    background-color:rgba(229, 229, 229, 0.1);
 }
 
 .promo a:hover,
 .promo a:focus {
-    background-color: #cccccc;
-    opacity: 0.2;
+    background-color: rgba(204, 204, 204, 0.2);
 }
 
 .promo a:active {
-    background-color: #b2b2b2;
-    opacity: 0.3;
+    background-color:rgba(178, 178, 178, 0.3);
 }
 
-.slider-top li {
-    width: 620px;
-    height: 266px;
-    
+.slider-top li {  
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 36px;
     line-height: 36px;
     font-weight: bold;
     font-style: normal;
     color: #ffffff;
-    text-decoration: uppercase;
+    text-transform: uppercase;
 
     background-color: #1c1310;
 }
@@ -394,6 +396,7 @@ a.user:active {
     font-weight: normal;
     font-style: normal;
     color: #ffffff;
+    text-transform: none;
 }
 
 .button {
@@ -417,6 +420,30 @@ a.user:active {
 }
 
 .button:active {
+    background-color: #ba2732;
+}
+
+.slider-top a.button {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+    border: none;
+}
+
+.slider-top a.button:hover,
+.slider-top a.button:focus {
+    background-color: #ca2c37;
+}
+
+.slider-top a.button:active {
     background-color: #ba2732;
 }
 
@@ -460,9 +487,6 @@ li.products:focus {
 }
 
 .products h3 {
-    width: 155px;
-    height: 33px;
-
     font-family: inherit;
     font-size: 18px;
     line-height: 20px;
@@ -481,9 +505,6 @@ li.products:focus {
 }
 
 .price {
-    width: 141px;
-    height: 38px;
-
     font-family: inherit;
     font-size: 17px;
     line-height: 18px;
@@ -506,9 +527,6 @@ li.products:focus {
 }
 
 .buy-button {
-    width: 135px;
-    height: 38px;
-
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -524,9 +542,6 @@ li.products:focus {
 }
 
 .bookmark-button {
-    width: 135px;
-    height: 38px;
-
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -548,6 +563,7 @@ li.products:focus {
 
 .buy-button:active {
     background-color: #518534;
+    box-shadow: none;
 }
 
 .bookmark-button:hover,
@@ -579,9 +595,10 @@ li.products:focus {
 }
 
 .brands li:active {
-    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
-    background-color: #ffffff;
     opacity: 0.3;
+    
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .services {
@@ -635,16 +652,6 @@ li.products:focus {
     box-shadow: 
     0px 1px 0 0 #293449,
     inset 0px 1px 0 0 #405069;
-}
-
-.slider-down-button:active {
-    color: #32425c;
-
-    background-color: #ffffff;
-    box-shadow: 
-    0px 1px 0 0 #ffffff,
-    inset 0px 1px 0 0 #ffffff;
-    border: none;
 }
 
 .slider-down-button-current {
@@ -785,7 +792,7 @@ li.products:focus {
     opacity: 0.4;
 }
 
-form button {
+.filter-button {
     width: 140px;
     height: 38px;
 
@@ -798,6 +805,73 @@ form button {
 
     border: solid 1px #e5e5e5;
     background-color: #ffffff;
+}
+
+.range-filter {
+    width: 220px;
+}
+
+.range-controls {
+    position: relative;
+    height: 80px;
+    margin-bottom: 9px;
+    background :#f7f3ec;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.scale {
+    margin-top: 39px;
+    margin-left: 30px;
+        
+    width: 170px;
+    height: 2px;
+
+    background:#d7dcde; 
+}
+
+.bar {
+    height: 2px;
+    background: #00ca74;
+    margin-left:10px;
+    width: 140px;
+}
+
+.toggle {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    background: #ababab;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 #e0ddd8;
+}
+
+.min-toggle {
+    left: 20px;
+}
+
+.max-toggle {
+    left: 160px;
+}
+
+.price-controls input {
+    width: 95px;
+    height: 38px;
+    border: none;
+    background :#f7f3ec;
+    font-size: 17px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    text-align: center;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.price-controls .min-price {
+    margin-right: 18px;
 }
 
 .sorting {
@@ -919,7 +993,7 @@ form button {
     vertical-align: middle;    
 }
 
-.site-logo-downa:hover,
+.site-logo-down:hover,
 .site-logo-down:focus {
     background-color: #ca2c37;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
@@ -928,6 +1002,15 @@ form button {
 .site-logo-down:active {
     background-color: #ba2732;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.site-logo-down a:hover,
+.site-logo-down a:focus {
+    background-color: #ca2c37;
+}
+
+.site-logo-down a:active {
+    background-color: #ba2732;
 }
 
 .contacts-bottom p {
@@ -961,9 +1044,14 @@ form button {
     text-decoration: underline solid;
 }
 
-.site-navigation-down-1 a:active,
+.site-navigation-down-1 a:active {
+    color: rgba(241, 245, 247, 0.5);
+    text-decoration: none;
+}
+
 .site-navigation-down-2 a:active {
-    opacity: o.5;
+    color: rgba(255, 209, 128, 0.5);
+    text-decoration: none;
 }
 
 .main-footer-2 {
@@ -1036,73 +1124,5 @@ form button {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
-
-
-
-
-
-
-
-
-.range-filter {
-    width: 220px;
-}
-
-.range-controls {
-    position: relative;
-    height: 80px;
-    margin-bottom: 9px;
-    background :#f7f3ec;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.scale {
-    margin-top: 39px;
-    margin-left: 30px;
-        
-    width: 170px;
-    height: 2px;
-
-    background:#d7dcde; 
-}
-
-.bar {
-    height: 2px;
-    background: #00ca74;
-    margin-left:10px;
-    width: 140px;
-}
-.toggle {
-    position: absolute;
-    top: 30px;
-    left: 10px;
-    width: 4px;
-    height: 4px;
-    border: 8px solid white;
-    background: #ababab;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 2px 0 0 #e0ddd8;
-}
-.min-toggle {
-    left: 20px;
-}
-.max-toggle {
-    left: 160px;
-}
-.price-controls input {
-    width: 95px;
-    height: 38px;
-    border: none;
-    background :#f7f3ec;
-    font-size: 17px;
-    font-family: "PT Sans", "Arial", sans-serif;
-    text-align: center;
-    color: #000000;
-    border-radius: 5px;
-}
-.price-controls .min-price {
-    margin-right: 18px;
 }
 
