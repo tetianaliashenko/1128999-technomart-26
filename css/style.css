@@ -56,6 +56,17 @@ html {
     box-sizing: inherit;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 body {
     margin: 0;
 
@@ -1044,10 +1055,6 @@ ul.brands {
     margin-bottom: auto;
 }
 
-.services-list {
-   margin-left: 320px;
-}
-
 .services-list:first-of-type .content {
     width: 275px;
     margin-top: 34px;
@@ -1100,12 +1107,13 @@ ul.brands {
     align-items: flex-start;
 }
 
-.tab input[type="radio"] {
-    display: none;
-}
-
 .services-list {
     position: absolute;
+    display: none;
+    margin-left: 320px;
+}
+
+.tab input[type="radio"] {
     display: none;
 }
 
@@ -1300,6 +1308,8 @@ li.tab {
 .filter input {
     margin-left: 0;
     padding-left: 0;
+
+    background-color: #c5c5c5;
 }
 
 .filter ul {
@@ -1309,10 +1319,6 @@ li.tab {
 
     font-size: 15px;
     line-height: 20px;
-}
-
-.filter-input {
-    background-color: #c5c5c5;
 }
 
 .filter-input:hover,
@@ -1537,13 +1543,13 @@ ul.pagination-list {
 }
 
 .pagination-item {
-    width: 38px;
+    min-width: 38px;
     margin-right: 10px;
     padding-top: 14px;
     padding-right: 15px;
     padding-bottom: 13px;
     padding-left: 16px;
-
+    
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     background-color: #ffffff; 
@@ -1554,7 +1560,7 @@ ul.pagination-list {
 }
 
 .pagination-item a {
-   color: #000000;  
+    color: #000000;  
 }
 
 .pagination-item:hover,
@@ -1776,15 +1782,3 @@ ul.site-navigation-down-2 {
 .footer-social li:active {
     background-color: #ee3643;
 } 
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
