@@ -1,47 +1,47 @@
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/cuprum.woff2') format('woff2'),
-         url('/fonts/web/cuprum.woff') format('woff');
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprum.woff2") format("woff2"),
+         url("../fonts/web/cuprum.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/cuprumbold.woff2') format('woff2'),
-         url('/fonts/web/cuprumbold.woff') format('woff');
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprumbold.woff2") format("woff2"),
+         url("../fonts/web/cuprumbold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/cuprumbolditalic.woff2') format('woff2'),
-         url('/fonts/web/cuprumbolditalic.woff') format('woff');
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprumbolditalic.woff2") format("woff2"),
+         url("../fonts/web/cuprumbolditalic.woff") format("woff");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/cuprumitalic.woff2') format('woff2'),
-         url('/fonts/web/cuprumitalic.woff') format('woff');
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/web/cuprumitalic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/ptsans.woff2') format('woff2'),
-         url('/fonts/web/ptsans.woff') format('woff');
+    font-family: "PT Sans";
+    src: url("../fonts/web/ptsans.woff2") format("woff2"),
+         url("../fonts/web/ptsans.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'sans-serif';
-    src: url('/fonts/web/ptsansbold.woff2') format('woff2'),
-         url('/fonts/web/ptsansbold.woff') format('woff');
+    font-family: "PT Sans";
+    src: url("../fonts/web/ptsansbold.woff2") format("woff2"),
+         url("../fonts/web/ptsansbold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
@@ -84,6 +84,7 @@ img {
 }
 
 body {
+    min-width: 960px;
     margin: 0;
 
     font-family: "Cuprum", "Arial", sans-serif;
@@ -155,7 +156,7 @@ h1.catalog-heading {
   
     width: 100px;
     height: 27px;
-    padding-top: 6px;
+    padding-top: 5px;
 
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
@@ -668,8 +669,6 @@ p.user a:active::after {
     flex-wrap: wrap;
 
     width: 940px;
-    margin-right: auto;
-    margin-left: auto;
 
     background-color: #32425c;
     box-shadow: inset 0px -5px 0 0 #293449;
@@ -764,6 +763,7 @@ ul.breadcrumbs {
     display: inline-block;
     width: 14px;
     height: 14px;
+
     vertical-align: top;
     
     background-image: url("../img/icon-home.svg");
@@ -813,7 +813,7 @@ ul.breadcrumbs {
     display: flex;
     margin: 0;
     margin-top: 59px;
-    margin-bottom: 51px;
+    margin-bottom: 53px;
     padding: 0;
 }
 
@@ -847,8 +847,8 @@ ul.promo-block-2 {
 .promo-block-1 li,
 .promo-block-2 li {
     width: 300px;
-    padding-top: 20px;
-    padding-bottom: 22px;
+    padding-top: 21px;
+    padding-bottom: 20px;
     padding-left: 23px;
 
     overflow: hidden;
@@ -871,6 +871,8 @@ ul.promo-block-2 {
     padding-top: 11.7px;
     padding-bottom: 12px;
     padding-left: 5px;
+
+    vertical-align: middle;
 
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -934,7 +936,7 @@ ul.promo-block-2 {
   
     width: 75px;
     height: 61px;
-  
+    
     background-image: url("../img/icon-2.svg");
     background-repeat: no-repeat; 
 }
@@ -984,7 +986,7 @@ ul.promo-block-2 {
   
     width: 59px;
     height: 72px;
-  
+
     background-image: url("../img/icon-4.svg");
     background-repeat: no-repeat; 
 }
@@ -1062,7 +1064,7 @@ li.slider-top {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin-right: 10px;
+    margin-right: 6px;
   
     vertical-align: top;
   
@@ -1088,8 +1090,8 @@ li.slider-top {
     border-radius: 50%;
 }
 
-.slider-top #input-slide-1:checked ~ .slider-controls label:first-of-type::before,
-.slider-top #input-slide-2:checked ~ .slider-controls label:nth-of-type(2)::before {
+.slider-top input:first-of-type:checked ~ .slider-controls label:first-of-type::before,
+.slider-top input:nth-of-type(2):checked ~ .slider-controls label:nth-of-type(2)::before {
     display: block;
 }
 
@@ -1147,8 +1149,7 @@ li.slide-2 img {
 li.slide-1 p:first-of-type,
 li.slide-2 p:first-of-type {
     margin: 0;
-    margin-top: 23px;
-    margin-bottom: 2px;
+    margin-top: 25px;
     margin-left: 24px;  
     padding: 0; 
     
@@ -1162,7 +1163,7 @@ li.slide-2 p:first-of-type {
 li.slide-1 p:last-of-type,
 li.slide-2 p:last-of-type {
     margin: 0;
-    margin-bottom: 120px;
+    margin-bottom: 122px;
     margin-left: 25px;  
     padding: 0;   
     
@@ -1199,8 +1200,8 @@ li.slide-2 a.button:active {
     background-color: #ba2732;
 }
 
-.slider-top #input-slide-1:checked ~ .slider-list li.slide-1,
-.slider-top #input-slide-2:checked ~ .slider-list li.slide-2 {
+.slider-top input:first-of-type:checked ~ .slider-list li.slide-1,
+.slider-top input:nth-of-type(2):checked ~ .slider-list li.slide-2 {
     display: block;
 }
 
@@ -1228,7 +1229,7 @@ li.slide-2 a.button:active {
 .popular .button {
     width: 253px;
     margin-right: 24px;
-    padding-top: 12px;
+    padding-top: 13px;
     padding-bottom: 13px;
 }
 
@@ -1237,7 +1238,7 @@ li.slide-2 a.button:active {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0;
-    margin-top: 21px;
+    margin-top: 20px;
     padding-left: 0;
 }
 
@@ -1275,9 +1276,9 @@ li.products:last-child {
     margin-right: 0;
 }
 
-.catalog .products:nth-of-type(3n) .product-image {
+.catalog .products:nth-of-type(3n) img {
     margin-left: 7px;
-}
+} 
 
 li.products:hover,
 li.products:focus {
@@ -1304,7 +1305,7 @@ li.products:focus {
 
 p.price {
     position: relative;
-    width: 124px;
+    width: 123px;
     margin-top: -2px;    
     margin-bottom: 19px;
     margin-left: 43px;
@@ -1332,6 +1333,7 @@ p.price::after {
 }
 
 .products del {
+    width: 69px;
     margin-top: 12px;
     margin-right: 75px;
     margin-bottom: 13px;
@@ -1346,7 +1348,7 @@ p.price::after {
     order: -1;
 
     height: 170px;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
        
     background-color: #f9f5f0;
 }
@@ -1434,7 +1436,7 @@ ul.brands {
     
     margin: 0;
     margin-top: 20px;
-    margin-bottom: 61.5px;
+    margin-bottom: 62px;
     padding: 0;
     padding-left: 0;
 
@@ -1530,8 +1532,8 @@ ul.brands {
 }
 
 .services {
-    padding-top: 68px;
-    padding-bottom: 97px;
+    padding-top: 67px;
+    padding-bottom: 98px;
 }
 
 .services h2,
@@ -1681,7 +1683,9 @@ ul.slider-down-list {
     width: 195px;
     margin-bottom: auto;
     padding-top: 14px;
-    padding-bottom: 14px;     
+    padding-bottom: 14px;
+    
+    vertical-align: middle;
 }
 
 .services-item:first-of-type::after {
@@ -1738,8 +1742,8 @@ ul.slider-down-list {
 .about-us-and-contacts {
     display: flex;
     justify-content: space-between;
-    padding-top: 79px;
-    padding-bottom: 86px;
+    padding-top: 78px;
+    padding-bottom: 85px;
 }
 
 .about-us {
@@ -1763,7 +1767,7 @@ ul.slider-down-list {
 }
 
 .delivery {
-    padding-bottom: 38px;
+    padding-bottom: 36px;
 }
 
 .delivery .content {
@@ -1783,7 +1787,7 @@ ul.slider-down-list {
 
 .delivery li {
     position: relative;
-    margin-bottom: 19px;
+    margin-bottom: 20px;
 
     font-size: 18px;
     line-height: 20px;
@@ -1823,13 +1827,13 @@ ul.slider-down-list {
 .contacts .content {
     width: 180px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 }
 
 .contacts a {
     display: block;
     width: 300px;
-    margin-bottom: 37px;
+    margin-bottom: 35px;
 }
 
 .contacts img {    
@@ -1875,7 +1879,7 @@ fieldset.filter-price {
 }
 
 fieldset.filter-producers {
-    padding-bottom: 21px;
+    padding-bottom: 23px;
     margin-bottom: 19px;
 }
 
@@ -1906,7 +1910,9 @@ fieldset.filter-power {
 }
 
 .filter-price legend {
-    margin-bottom: 7px;
+    margin-bottom: 23px;
+
+    line-height: 13px;    
 }
 
 .filter-producers legend {
@@ -1914,7 +1920,7 @@ fieldset.filter-power {
 }
 
 .filter-power legend {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
 
@@ -1936,7 +1942,7 @@ fieldset.filter-power {
 .range-controls {
     position: relative;
     height: 80px;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     padding: 0;
 
     background :#f7f3ec;
@@ -1983,7 +1989,7 @@ fieldset.filter-power {
 }
 
 .price-controls input {
-    width: 95px;
+    width: 94px;
     height: 39px;
     padding-left: 4px;
 
@@ -2014,9 +2020,12 @@ fieldset.filter-power {
     margin-bottom: 0;
 }
 
-.filter-option label {
+.filter-input-checkbox + label,
+.filter-input-radio + label {
     position: relative;
     display: block;
+
+    color: #000000;
   
     cursor: pointer;
 }
@@ -2070,6 +2079,11 @@ fieldset.filter-power {
     opacity: 0.3;
 }
 
+.filter-input-checkbox:disabled + label,
+.filter-input-checkbox:checked:disabled + label {
+    color: #e9e9e9;
+}
+
 .filter-input-radio + label::before {
     content: "";
     position: absolute;
@@ -2116,6 +2130,11 @@ fieldset.filter-power {
     opacity: 0.3;
 }
 
+.filter-input-radio:disabled + label,
+.filter-input-radio:checked:disabled + label {
+    color: #e9e9e9;
+}
+
 .filter-button {
     width: 140px;
     margin-top: 78px;
@@ -2141,7 +2160,7 @@ fieldset.filter-power {
     display: flex;
     width: 700px;
     padding-top: 8px;
-    padding-bottom: 9px;
+    padding-bottom: 6px;
 
     background-color: #f7f3ec;
 }
@@ -2202,8 +2221,8 @@ button.functions-sorting {
 button.up-sorting {
     width: 11px;
     height: 14px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 4px;
+    margin-bottom: 5px;
     margin-right: 21px;
 
     opacity: 1;
@@ -2217,6 +2236,8 @@ button.up-sorting {
 button.down-sorting {
     width: 11px;
     height: 14px;
+    margin-top: 4px;
+    margin-bottom: 5px;
     margin-right: 17px;
 
     opacity: 1;
@@ -2259,7 +2280,7 @@ button.down-sorting.active {
     display: flex;
     flex-wrap: wrap;
 
-    margin-top: 33px;
+    margin-top: 31px;
     margin-right: auto;
     margin-bottom: 60px;
     padding: 0;
@@ -2320,7 +2341,7 @@ button.down-sorting.active {
 .about-product {
     margin-bottom: 0;
     padding-top: 64px;
-    padding-bottom: 71px;
+    padding-bottom: 69px;
 } 
 
 .about-product h2 {
@@ -2333,7 +2354,7 @@ button.down-sorting.active {
     margin: 0;
     padding: 0;
 
-    letter-spacing: 0.13px;
+    letter-spacing: 0.11px;
 }
 
 .sorting-products {
@@ -2420,7 +2441,7 @@ ul.site-navigation-down-2 {
     flex-wrap: wrap;
 
     margin: 0;
-    margin-top: 34px;
+    margin-top: 36px;
     margin-left: auto;
 
     padding: 0;
@@ -2516,14 +2537,14 @@ ul.site-navigation-down-2 {
 .main-footer-2 p:nth-of-type(2) {
     width: 135px;
     margin-top: 37px;
-    margin-right: 53px;
+    margin-right: 51px;
     margin-bottom: 35px;
 }
 
 .main-footer-2 p:nth-of-type(3) {
-    width: 96px;  
+    width: 99px;  
     margin-top: 36px;
-    margin-right: 15px;
+    margin-right: 13px;
     margin-bottom: 34px; 
 }
 
